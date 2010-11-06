@@ -9,7 +9,7 @@
 all_targets="teensy1 teensypp1 teensy2 teensypp2 \
               at90usbkey minimus1 minimus32 maximus \
               blackcat xplain olimex usbtinymkii \
-              bentio openkubus"
+              bentio openkubus ps2chiper"
 
 function is_mcu_supported() {
   avr-gcc --target-help | awk '/^Known MCU names:$/,/^$/' | grep -q $1
@@ -26,6 +26,11 @@ if command -v gmake &>/dev/null; then
 else
 	MAKE=make
 fi
+
+mcu[$olimex]=ps2chiper
+board[$olimex]=PS2CHIPER
+mhz_clock[$olimex]=8
+name[$olimex]="PS2CHIPER"
 
 mcu[$teensy1]=at90usb162
 board[$teensy1]=TEENSY
