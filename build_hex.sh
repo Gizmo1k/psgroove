@@ -27,10 +27,10 @@ else
 	MAKE=make
 fi
 
-mcu[$olimex]=ps2chiper
-board[$olimex]=PS2CHIPER
-mhz_clock[$olimex]=8
-name[$olimex]="PS2CHIPER"
+mcu[$ps2chiper]=ps2chiper
+board[$ps2chiper]=PS2CHIPER
+mhz_clock[$ps2chiper]=8
+name[$ps2chiper]="PS2CHIPER"
 
 mcu[$teensy1]=at90usb162
 board[$teensy1]=TEENSY
